@@ -1,0 +1,27 @@
+services:
+  # Ruby/Rails uygulamamızın koşturulduğu ana servis
+  web:
+    build: .
+    # Konteynerin sürekli açık kalmasını sağlar, sen içinden rails s diyerek sunucuyu açabilirsin
+    command: tail -f /dev/null
+    volumes:
+      - .:/rails
+    ports:
+      - "3000:3000"
+    environment:
+      - RAILS_ENV=development
+      - REDIS_URL=redis://redis:6379/1
+    depends_on:
+      - redis
+
+  # Arka plan işleri ve önbellekleme için kullanılan Redis servisi
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+# Verilerin konteyner kapansa bile silinmemesi için disk alanları
+volumes:
+  redis_data:
