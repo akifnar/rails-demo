@@ -1,0 +1,3 @@
+.field_wit_herrors :is(input, textarea, select) {
+border: solid red 2px !important ;
+}
