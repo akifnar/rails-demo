@@ -3,11 +3,18 @@
 one:
   title: MyString
   description: MyText
-  image_url: MyString
+  image_url: Lorem Ipsum.png
   price: 9.99
 
 two:
   title: MyString
   description: MyText
-  image_url: MyString
+  image_url: Lorem Ipsum.png
   price: 9.99
+
+
+coffe_machine:
+  title:        Super Roaster 1800
+  description:  Best for developers. As everyone says "Best friend for computer nerds"
+  price: 1298.90
+  image_url: Coffe Machine.webp
