@@ -1,1 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 @import "tailwindcss";
+
+@theme {
+    /* Tailwind'e 'inter-font' ismini burada tanıtıyoruz */
+    --font-inter-font: "Inter", sans-serif;
+}
+
+/* Eğer tüm sayfayı Inter yapmak istiyorsan */
+body {
+    font-family: var(--font-inter-font);
+}
