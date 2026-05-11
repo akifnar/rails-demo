@@ -1,9 +1,13 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
+check:
   id: 1
-  name: MyString
+  name: Check
 
-two:
-  id: 1
-  name: MyString
+credit_card:
+  id: 2
+  name: Credit Card
+
+purchase_order:
+  id: 3
+  name: Purchase Order

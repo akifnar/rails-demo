@@ -11,17 +11,19 @@ class OrdersTest < ApplicationSystemTestCase
   end
 
   test "should create order" do
-    visit orders_url
-    click_on "New order"
+    visit store_index_url
+    click_on "Add to Cart", match: :first
+
+    click_on "Checkout"
 
     fill_in "Address", with: @order.address
     fill_in "Email", with: @order.email
     fill_in "Name", with: @order.name
-    fill_in "Pay type", with: @order.pay_type
-    click_on "Create Order"
+    select PayType.find(@order.pay_type_id).name,  from: "Pay type"
+    click_on "Place Order"
 
-    assert_text "Order was successfully created"
-    click_on "Back"
+    assert_text "Thank you for your order."
+    assert_current_path store_index_path
   end
 
   test "should update Order" do
@@ -31,11 +33,11 @@ class OrdersTest < ApplicationSystemTestCase
     fill_in "Address", with: @order.address
     fill_in "Email", with: @order.email
     fill_in "Name", with: @order.name
-    fill_in "Pay type", with: @order.pay_type
-    click_on "Update Order"
+    select PayType.find(@order.pay_type_id).name, from: "Pay type"
 
-    assert_text "Order was successfully updated"
-    click_on "Back"
+    click_on "Place Order"
+    assert_text "Order was successfully updated."
+    assert_current_path store_index_path
   end
 
   test "should destroy Order" do
