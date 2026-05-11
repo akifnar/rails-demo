@@ -1,0 +1,16 @@
+<table>
+  <thead>
+    <tr>
+      <th>Customer</th>
+      <th>Pay Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @product.orders.each do |order| %>
+      <tr>
+        <td><%= order.name %></td>
+        <td><%= order.pay_type&.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
