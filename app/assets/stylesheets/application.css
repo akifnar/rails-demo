@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+
+.catalog-button button {
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.catalog-button button:hover {
+    transform: scale(1.1);
+}
