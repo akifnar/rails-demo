@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
+  resources :pay_types
+  resources :orders
+  resources :line_items
+  resources :carts
   root "store#index", as: "store_index"
   get "store/index"
-  resources :products
+  resources :products do
+    member do
+      get "who_bought"
+    end
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -14,4 +22,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  match "*path", to: redirect("/"), via: :all
 end
