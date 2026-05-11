@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[ show edit update destroy ]
-
+  rescue_from ActiveRecord::RecordNotFound, with: :invalid_product
   # GET /products or /products.json
   def index
     @products = Product.all
@@ -8,6 +8,16 @@ class ProductsController < ApplicationController
 
   # GET /products/1 or /products/1.json
   def show
+  end
+
+
+  def who_bought
+    @product = Product.includes(line_items: :order).find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json { render json: @product.to_json(include: :orders)  }
+      format.xml { render xml: @product.to_xml(include: :orders)  }
+    end
   end
 
   # GET /products/new
@@ -22,7 +32,6 @@ class ProductsController < ApplicationController
   # POST /products or /products.json
   def create
     @product = Product.new(product_params)
-
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: "Product was successfully created." }
@@ -41,6 +50,10 @@ class ProductsController < ApplicationController
       if @product.update(product_params)
         format.html { redirect_to @product, notice: "Product was successfully updated.", status: :see_other }
         format.json { render :show, status: :ok, location: @product }
+
+
+        @product.broadcast_replace_later_to "products",
+          partial: "store/product"
       else
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @product.errors, status: :unprocessable_entity }
@@ -58,6 +71,7 @@ class ProductsController < ApplicationController
     end
   end
 
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
@@ -67,5 +81,10 @@ class ProductsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def product_params
       params.require(:product).permit(:title, :description, :image_url, :price)
+    end
+
+    def invalid_product
+      logger.error "Attempt to access not existing product #{params[:id]}"
+      redirect_to store_index_url, notice: "This product does not exist"
     end
 end
