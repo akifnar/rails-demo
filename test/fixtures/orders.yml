@@ -5,6 +5,8 @@ one:
   address: MyText
   email: akifnar@exa.org
   pay_type_id: 1
+  account_number: 1234123412341234
+  routing_number: 1234
 
 two:
   name: MyString

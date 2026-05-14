@@ -31,7 +31,7 @@ class Order < ApplicationRecord
 
 
   validates :po_number,
-  length: { in: 5..20, message: " number must be between 5 and 20 digits long" },
+  length: { in: 5..20, message: " must be between 5 and 20 digits long" },
   presence: true,
   if: -> { find_pay_type("Purchase order") }
 
