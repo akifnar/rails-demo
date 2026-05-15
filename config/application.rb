@@ -9,6 +9,8 @@ Bundler.require(*Rails.groups)
 module RailsDemo
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.time_zone = "Europe/Istanbul"
+    config.active_record.default_timezone = :local
     config.load_defaults 7.2
 
     # Please, add to the `ignore` list any other `lib` subdirectories that do
