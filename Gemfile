@@ -58,3 +58,4 @@ end
 
 gem "tailwindcss-rails", "~> 4.4"
 gem "activemodel-serializers-xml"
+gem "ostruct"
