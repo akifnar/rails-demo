@@ -1,0 +1,8 @@
+Dear <%= @order.name %>
+
+We are sorry, but your payment process failed. Your order from The Pragmatic Store could not be completed.
+
+The following items could not be processed:
+
+<%= render @order.line_items %>
+

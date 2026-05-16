@@ -18,11 +18,15 @@ class ApplicationController < ActionController::Base
   end
 
   def handle_exception(exception)
-    ErrorMailer.error_notification(exception.message, exception.backtrace).deliver_now
-
+    ErrorMailer.error_notification(exception.message, exception.backtrace).deliver_later
     respond_to  do |format|
+
+      format.turbo_stream {
+        flash.now[:notice] = "Application Failure"
+        render turbo_stream: turbo_stream.replace("notice", partial: "store/notice")
+      }
       format.html { redirect_to store_index_url, notice: "Application Failure" }
-      format.json { render json: { error: "Application Failure " }, status: :internal_server_error }
+      format.json { render json: { error: "Application Failure" }, status: :internal_server_error }
     end
   end
 end

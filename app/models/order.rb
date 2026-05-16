@@ -67,9 +67,8 @@ class Order < ApplicationRecord
           update!(shipdate: 1.day.from_now)
           OrderMailer.shipped(self).deliver_later
         end
-
     else
-      raise payment_result.error
+      OrderMailer.failed(self).deliver_later
     end
   end
 

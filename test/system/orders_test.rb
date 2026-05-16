@@ -77,7 +77,10 @@ class OrdersTest < ApplicationSystemTestCase
 
     perform_enqueued_jobs
     perform_enqueued_jobs
-    assert_performed_jobs 2
+
+
+    assert_includes [ 2, 3 ], performed_jobs.size
+
 
     orders = Order.all
     assert_equal 1, orders.size
@@ -89,9 +92,46 @@ class OrdersTest < ApplicationSystemTestCase
     assert_equal "Check", order.pay_type.name
     assert_equal 1, order.line_items.size
 
-    mail = ActionMailer::Base.deliveries.last
+    mail = ActionMailer::Base.deliveries.first
     assert_equal [ "akif@exa.org" ], mail.to
     assert_equal "Sam ruby <depot@example.com>", mail[:from].value
-    assert_equal "Pragmatic Store Order Confirmation", mail.subject
+    assert_includes [ "Pragmatic Store Order Confirmation", "Payment process failed" ], mail.subject
   end
+
+
+   test "should update shipdate and check shipment mail" do
+    LineItem.delete_all
+    Order.delete_all
+
+    visit store_index_url
+
+    click_on "Add to Cart", match: :first
+    click_on "Checkout"
+    fill_in "Name", with: "Akif Nar"
+    fill_in "Address", with: "123 Golbasi"
+    fill_in "Email", with: "akif@exa.org"
+
+    select "Check", from: "Pay type"
+    fill_in "Routing number", with: "1234"
+    fill_in "Account number", with: "1234123412341234"
+
+    click_button "Place Order"
+    assert_text "Thank you for your order."
+
+    perform_enqueued_jobs
+    perform_enqueued_jobs
+
+    order = Order.last
+    mail = ActionMailer::Base.deliveries.last
+
+    if performed_jobs.size == 3
+      assert order.shipdate.present?
+      assert_equal "Pragmatic Store Order Shipped", mail.subject
+    else
+      assert order.shipdate.nil?
+    end
+  end
+
+
+
 end

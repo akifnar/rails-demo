@@ -1,0 +1,11 @@
+<h3>Dear <%= @order.name %></h3>
+<p>
+We are sorry, but your payment process failed. Your order from The Pragmatic Store could not be completed.
+
+The following items could not be processed:
+</p>
+
+<table>
+  <tr><th colspan="2">Qty</th><th>Description</th></tr>
+  <%= render @order.line_items%>
+</table>

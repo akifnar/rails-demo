@@ -19,7 +19,13 @@ class Pago
       raise "Unknown payment_method #{payment_method}"
     end
     sleep 3 unless Rails.env.test?
-    Rails.logger.info "Done Processing Payment"
-    OpenStruct.new(succeeded?: true)
+
+       if rand(3) % 2 == 0
+        Rails.logger.info "Done Processing Payment"
+        OpenStruct.new(succeeded?: true)
+       else
+        Rails.logger.info "Failed Processing Payment"
+        OpenStruct.new(succeeded?: false)
+       end
   end
 end
