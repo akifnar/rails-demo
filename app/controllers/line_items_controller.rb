@@ -26,7 +26,6 @@ class LineItemsController < ApplicationController
     session[:counter] = 0
     product = Product.find(params[:product_id])
     @line_item = @cart.add_product(product)
-
     respond_to do |format|
       if @line_item.save
         format.turbo_stream { @current_item = @line_item }
