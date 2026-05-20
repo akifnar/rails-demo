@@ -57,5 +57,9 @@ group :test do
 end
 
 gem "tailwindcss-rails", "~> 4.4"
+
 gem "activemodel-serializers-xml"
+
 gem "ostruct"
+
+gem "bcrypt", "~> 3.1.7"

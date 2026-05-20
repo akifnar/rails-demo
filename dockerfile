@@ -10,19 +10,9 @@ RUN apt-get update -qq && \
     pkg-config \
     curl \
     node-gyp \
-    python-is-python3 && \
-    rm -rf /var/lib/apt/lists /var/cache/apt/archives \
-    libnss3 \
-    libatk1.0-0 \
-    libgbm1 \
-    libasound2 \
-    fonts-liberation \
-    libu2f-udev \
-    xdg-utils && \
-    # Chrome'u indir ve kur
-    wget -q https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb && \
-    apt-get install -y ./google-chrome-stable_current_amd64.deb && \
-    rm google-chrome-stable_current_amd64.deb && \
+    python-is-python3 \
+    chromium \
+    chromium-driver && \
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
 
 # Çalışma dizini /rails olarak sabitlenir
@@ -44,6 +34,3 @@ RUN chmod +x bin/*
 
 # Dış dünyaya açılan port
 EXPOSE 3000
-
-# Ana çalıştırma komutu
-#CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
