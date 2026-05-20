@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49168e43-da45-47e1-9e04-73b9025b526d" name="Changes" comment="Add error handler for turbo_steam">
-      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/environments/development.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/development.rb" afterDir="false" />
+    <list default="true" id="49168e43-da45-47e1-9e04-73b9025b526d" name="Changes" comment="Add user logging">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/products_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/products_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/users_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/users_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/users.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/users.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/mailers/error_mailer_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/mailers/error_mailer_test.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -341,6 +341,7 @@
       <updated>1779264828801</updated>
       <workItem from="1779264829929" duration="8739000" />
       <workItem from="1779273655799" duration="4083000" />
+      <workItem from="1779279911447" duration="3874000" />
     </task>
     <task id="LOCAL-00001" summary="Add error handler for turbo_steam">
       <option name="closed" value="true" />
@@ -350,7 +351,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779269702638</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add user logging">
+      <option name="closed" value="true" />
+      <created>1779279980674</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1779279980674</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add user logging">
+      <option name="closed" value="true" />
+      <created>1779280034537</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1779280034537</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -370,6 +387,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add order payment failure notification mailer and integrate randomized payment processing results" />
     <MESSAGE value="Add error handler for turbo_steam" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add error handler for turbo_steam" />
+    <MESSAGE value="Add user logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add user logging" />
   </component>
 </project>
