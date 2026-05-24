@@ -5,6 +5,7 @@ class OrdersTest < ApplicationSystemTestCase
 
   setup do
     @order = orders(:one)
+    login_as("akif","tatli")
   end
 
   test "visiting the index" do

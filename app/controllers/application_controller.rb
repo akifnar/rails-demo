@@ -1,5 +1,8 @@
 class ApplicationController < ActionController::Base
   # Only allow modern browsers supporting webp images, web push, badges, import maps, CSS nesting, and CSS :has.
+
+  before_action :authorize
+
   rescue_from StandardError, with: :handle_exception
 
   allow_browser versions: :modern
@@ -27,6 +30,13 @@ class ApplicationController < ActionController::Base
       }
       format.html { redirect_to store_index_url, notice: "Application Failure" }
       format.json { render json: { error: "Application Failure" }, status: :internal_server_error }
+    end
+  end
+
+  protected
+  def authorize
+    unless User.find_by(id: session[:user_id])
+      redirect_to login_url, notice: "Please log in"
     end
   end
 end

@@ -1,6 +1,11 @@
 require "application_system_test_case"
 
 class CartTest < ApplicationSystemTestCase
+
+  setup do
+    login_as("akif","tatli")
+  end
+
   test "revealing and hiding the cart" do
     visit store_index_url
 

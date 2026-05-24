@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: %i[ show edit update destroy ]
+  before_action :set_user, only: %i[ show edit update destroy check_password ]
+  before_action :require_password, only: %i[ edit ]
 
   # GET /users or /users.json
   def index
@@ -8,6 +9,23 @@ class UsersController < ApplicationController
 
   # GET /users/1 or /users/1.json
   def show
+    session[:password_verified] = false
+  end
+
+  def require_password
+    unless session[:password_verified]
+      render "require_password"
+    end
+  end
+
+  def check_password
+    if @user.authenticate(params[:old_password])
+      session[:password_verified] = true
+      redirect_to edit_user_path(@user)
+    else
+      flash.now[:notice] = "Incorrect password"
+      render "require_password", status: :unprocessable_entity
+    end
   end
 
   # GET /users/new
@@ -34,10 +52,13 @@ class UsersController < ApplicationController
     end
   end
 
+
+
   # PATCH/PUT /users/1 or /users/1.json
   def update
     respond_to do |format|
       if @user.update(user_params)
+        session[:password_verified] = false
         format.html { redirect_to users_url, notice: "User #{@user.name} was successfully updated.", status: :see_other }
         format.json { render :show, status: :ok, location: @user }
       else
@@ -56,6 +77,11 @@ class UsersController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+    rescue_from "User::Error" do |exception|
+      redirect_to users_url, notice: exception.message
+    end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

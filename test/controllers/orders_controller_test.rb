@@ -2,6 +2,8 @@ require "test_helper"
 
 class OrdersControllerTest < ActionDispatch::IntegrationTest
   setup do
+    login_as_user(users(:one))
+
     @order = orders(:one)
   end
 

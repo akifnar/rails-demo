@@ -1,6 +1,11 @@
 require "test_helper"
 
 class StoreControllerTest < ActionDispatch::IntegrationTest
+
+  setup do
+    login_as_user(users(:one))
+  end
+
   test "should get index" do
     get store_index_url
     assert_response :success

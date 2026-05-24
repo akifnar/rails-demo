@@ -2,6 +2,7 @@ require "test_helper"
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
   setup do
+    login_as_user(users(:one))
     @user = users(:one)
   end
 
@@ -42,7 +43,15 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
     assert_difference("User.count", -1) do
       delete user_url(users(:one))
     end
-
     assert_redirected_to users_url
+  end
+
+  test "should login then logout" do
+    get login_url
+    post login_url, params: { name: "demet", password: "helva" }
+    assert_redirected_to admin_url
+
+    delete "/logout"
+    assert_redirected_to store_index_url
   end
 end

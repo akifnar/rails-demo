@@ -2,6 +2,7 @@ require "test_helper"
 
 class CartsControllerTest < ActionDispatch::IntegrationTest
   setup do
+    login_as_user(users(:one))
     post line_items_url, params: { product_id: products(:one).id }
 
     @cart = Cart.find(session[:cart_id])

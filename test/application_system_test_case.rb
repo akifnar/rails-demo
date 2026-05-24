@@ -5,4 +5,14 @@ class ApplicationSystemTestCase < ActionDispatch::SystemTestCase
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
   end
+
+  def login_as(username, password)
+    visit login_url
+
+    fill_in "Name", with: username
+    fill_in "Password", with: password
+    click_on "Login"
+
+    assert_text "Welcome"
+  end
 end

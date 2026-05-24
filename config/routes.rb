@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root "store#index", as: "store_index"
+
   get "admin" => "admin#index"
 
   controller :sessions do
@@ -7,18 +9,28 @@ Rails.application.routes.draw do
     delete "logout" => :destroy
   end
 
-  resources :users
-  resources :pay_types
-  resources :orders
-  resources :line_items
-  resources :carts
-  root "store#index", as: "store_index"
-  get "store/index"
+
   resources :products do
     member do
       get "who_bought"
     end
   end
+
+  resources :users do
+    member do
+      get :require_password
+      post :check_password
+    end
+  end
+
+  resources :users
+  resources :pay_types
+  resources :orders
+  resources :line_items
+  resources :carts
+  get "store/index"
+
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -31,5 +43,5 @@ Rails.application.routes.draw do
 
    # Defines the root path route ("/")
    # root "posts#index"
-   match "*path", to: redirect("/"), via: :all
+
 end
