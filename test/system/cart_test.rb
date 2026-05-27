@@ -1,6 +1,6 @@
 require "application_system_test_case"
 
-class CartTest < ApplicationSystemTestCase
+class CartSystemTest < ApplicationSystemTestCase
 
   setup do
     login_as("akif","tatli")
@@ -12,9 +12,9 @@ class CartTest < ApplicationSystemTestCase
     assert_no_selector "#cart h2"
     click_on "Add to Cart", match: :first
 
-    assert_selector "button", text: "Empty Cart"
+    assert_selector "button", text: "Empty cart"
 
-    click_on "Empty Cart"
+    click_on "Empty cart"
 
     assert_no_selector "#cart h2"
   end

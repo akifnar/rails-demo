@@ -1,35 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49168e43-da45-47e1-9e04-73b9025b526d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/views/users/require_password.html.erb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/initializers/first_run.rb" afterDir="false" />
+    <list default="true" id="49168e43-da45-47e1-9e04-73b9025b526d" name="Changes" comment="Add verification inorder to update password and add initial user creation when application opened first time.">
+      <change afterPath="$PROJECT_DIR$/app/javascript/controllers/locale_controller.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/initializers/i18n.rb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/locales/es.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/migrate/20260526105303_addlocale_products.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/carts_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/carts_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/line_items_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/line_items_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/orders_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/orders_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/products_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/products_controller.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/store_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/store_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/users_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/users_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/user.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/user.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/cart.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/cart.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/product.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/product.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/carts/_cart.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/carts/_cart.html.erb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/users/edit.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/users/edit.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/line_items/_line_item.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/line_items/_line_item.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/orders/_cc.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/orders/_cc.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/orders/_check.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/orders/_check.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/orders/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/orders/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/orders/_po.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/orders/_po.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/orders/new.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/orders/new.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/products/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/products/_form.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/products/_product.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/products/_product.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/store/_product.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/store/_product.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/store/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/store/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/locales/en.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/locales/en.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/application_system_test_case.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/application_system_test_case.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/admin_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/admin_controller_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/carts_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/carts_controller_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/line_items_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/line_items_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/controllers/orders_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/orders_controller_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/products_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/products_controller_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/sessions_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/sessions_controller_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/store_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/store_controller_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/controllers/users_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/users_controller_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/fixtures/users.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/users.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/system/cart_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/system/cart_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/system/orders_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/system/orders_test.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/system/users_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/system/users_test.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test_helper.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_helper.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,25 +73,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;New/updated database configurations found&quot;,
-    &quot;Notification.DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ruby.rubocop.migration.global.runOnSaveToExternalFormatter&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.lang.ruby.rbs.tools.collection.workspace.sync.RbsCollectionUpdateProjectActivity#LAST_UPDATE_TIMESTAMP&quot;: &quot;1779590217974&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.runtime&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found": "New/updated database configurations found",
+    "Notification.DoNotAsk-DatabaseConfigFileWatcher.found": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.ruby.rubocop.migration.global.runOnSaveToExternalFormatter": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.lang.ruby.rbs.tools.collection.workspace.sync.RbsCollectionUpdateProjectActivity#LAST_UPDATE_TIMESTAMP": "1779853908268",
+    "git-widget-placeholder": "main",
+    "nodejs_package_manager_path": "npm",
+    "ruby.structure.view.model.defaults.configured": "true",
+    "settings.editor.selected.configurable": "settings.javascript.runtime",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/test" />
@@ -377,7 +380,11 @@
       <workItem from="1779486247244" duration="728000" />
       <workItem from="1779553808558" duration="8542000" />
       <workItem from="1779590157889" duration="7010000" />
-      <workItem from="1779636428270" duration="779000" />
+      <workItem from="1779636428270" duration="3742000" />
+      <workItem from="1779708014303" duration="7544000" />
+      <workItem from="1779735102868" duration="2176000" />
+      <workItem from="1779790912896" duration="5643000" />
+      <workItem from="1779853849207" duration="732000" />
     </task>
     <task id="LOCAL-00001" summary="Add error handler for turbo_steam">
       <option name="closed" value="true" />
@@ -411,7 +418,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779283944496</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add verification inorder to update password and add initial user creation when application opened first time.">
+      <option name="closed" value="true" />
+      <created>1779637342199</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1779637342199</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -433,7 +448,8 @@
     <MESSAGE value="Add error handler for turbo_steam" />
     <MESSAGE value="Add user logging" />
     <MESSAGE value="Add session controller to be able to log in" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add session controller to be able to log in" />
+    <MESSAGE value="Add verification inorder to update password and add initial user creation when application opened first time." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add verification inorder to update password and add initial user creation when application opened first time." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

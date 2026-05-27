@@ -3,15 +3,15 @@
   
 
   <h1 class = "font-bold text-xl mb-6 pb-2 border-b-2">
-    Your Mesmerizing Catalog
+    <%= t('.title_html') %>
   </h1>
 
   <%= turbo_stream_from 'products' %>
   
   <ul>
-    <% cache @products do %>
+    <% cache [@products, I18n.locale] do %>
       <% @products.each do |product| %>
-        <% cache product do%>
+        <% cache [product, I18n.locale] do%>
           <%= render partial: 'product', object: product %>
         <% end %>
       <% end %>

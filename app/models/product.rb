@@ -15,6 +15,11 @@ class Product < ApplicationRecord
   validates :title, length: { minimum: 10, message: "minimum 10 characters" }
 
 
+  def price_in_locale
+    rate = I18n.t("currency_settings.rate", default: 1.0).to_f
+    price * rate
+  end
+
   private
     # ensure that there are no line items referencing this product
     def ensure_not_referenced_by_any_line_item

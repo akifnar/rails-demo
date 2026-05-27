@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   # Only allow modern browsers supporting webp images, web push, badges, import maps, CSS nesting, and CSS :has.
 
   before_action :authorize
+  before_action :set_i18n_locale_from_params
 
   rescue_from StandardError, with: :handle_exception
 
@@ -34,6 +35,17 @@ class ApplicationController < ActionController::Base
   end
 
   protected
+
+  def set_i18n_locale_from_params
+    if params[:locale]
+      if I18n.available_locales.map(&:to_s).include?(params[:locale].to_s)
+        I18n.locale = params[:locale]
+      else
+        flash.now[:notice] = "#{params[:locale]} translation not available"
+      end
+    end
+  end
+
   def authorize
     unless User.find_by(id: session[:user_id])
       redirect_to login_url, notice: "Please log in"

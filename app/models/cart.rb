@@ -13,6 +13,6 @@ class Cart < ApplicationRecord
   end
 
   def total_price
-    line_items.sum { |item| item.total_price }
+    line_items.sum { |item| item.product.price_in_locale * item.quantity }
   end
 end

@@ -1,0 +1,84 @@
+es:
+  layouts:
+    application:
+      title: "Biblioteca de Pragmatic"
+      home: "Inicio"
+      questions: "Pregunta"
+      news: "Noticias"
+      contact: "Contacto"
+      visit_text: "Visita Nº: %{count} ¿Sigues pensándolo?"
+
+  store:
+    index:
+      title_html: "Tu fascinante catálogo"
+    product:
+      add_html: "A&ntilde;adir al Carrito"
+
+  carts:
+    cart:
+      title: "Tu carrito molón"
+      empty: "Vaciar Carrito"
+      checkout: "Comprar"
+      total: "Total:"
+
+  line_items:
+    line_item:
+      decrement: "Disminuir"
+
+  orders:
+    new:
+      legend: "Por favor, introduzca sus datos"
+    form:
+      name: "Nombre"
+      address_html: "Direcci&oacute;n"
+      email: "E-mail"
+      pay_type: "Forma de pago"
+      pay_prompt_html: "Seleccione un método de pago"
+      submit: "Realizar Pedido"
+      pay_types:
+        "Check": "Cheque"
+        "Credit card": "Tarjeta de Crédito"
+        "Purchase order": "Orden de Compra"
+    check:
+      routing_number: "# de Enrutamiento"
+      account_number: "# de Cuenta"
+    cc:
+      cc_number: "Número"
+      expiration_date: "Expiración"
+    po:
+        po_number: "Número"
+
+
+
+  currency_settings:
+    code: "EUR"
+    rate: 0.92
+
+  number:
+    nth:
+      ordinalized: "%{number}º"
+    currency:
+      format:
+        unit: "€"
+        precision: 2
+        separator: ","
+        delimiter: "."
+        format: "%n&nbsp;%u"
+
+
+
+  activerecord:
+    models:
+      order: "pedido"
+    errors:
+      messages:
+        inclusion: "no est&aacute; incluido en la lista"
+        blank: "no puede quedar en blanco"
+        required: "debe existir"
+      template:
+        body: "Hay problemas con los siguientes campos:"
+        header:
+          one: "1 error ha impedido que este %{model} se guarde"
+          other: "%{count} errores han impedido que este %{model} seguarde"
+
+  thanks: "Gracias por su pedido"

@@ -9,12 +9,12 @@
         <%= line_item.product.title %>
     </td>
     <td class = "text-right font-bold">
-        <%= number_to_currency(line_item.total_price)%>
+        <%= number_to_currency(line_item.product.price_in_locale)%>
     </td>
     
     <% unless @order || current_page?(controller: 'orders', action: 'new')  %>
     <td>
-        <%= button_to 'Decrement', line_item, method: :delete,
+        <%= button_to t('.decrement'), line_item, method: :delete,
         class: 'ml-4 rounded-lg py-1 px-2 text-white bg-green-600'%>    
     </td>
     <% end %>

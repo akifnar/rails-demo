@@ -6,33 +6,54 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag%>
     <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
-    
+
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags%>
+    <%= javascript_importmap_tags %>
   </head>
   <body>
     <header class="bg-green-700" >
+
+      <aside data-controller="locale" class="absolute top-4 right-4 z-10 bg-white">
+        <%= form_with url: store_index_path, class: 'locale' do %>
+          <%= select_tag 'set_locale',
+          options_for_select(LANGUAGES, I18n.locale.to_s),
+          onchange: 'this.form.submit()' %>
+          <%= submit_tag 'submit', data: { 'locale-target' => 'submit' } %>
+        <% end %>
+      </aside>
+
       <%= image_tag 'logo.svg',class:"w-70 h-35", alt: 'The Pragmatic Things'%>
       <h1><%= @page_title %></h1>
     </header>
 
     <section class="flex">
       <nav class="bg-green-900 p-6">
-        
+
         <%= render partial: 'layouts/cart', locals: {cart: @cart}%>
 
-        
+
         <%=current_time %>
         <ul class="text-gray-300 leading-8">
           <% if @session_counter && @session_counter > 5 %>
-            <li class = "text-white whitespace-nowrap">Visit No: <%= @session_counter.ordinalize %> Still thinking about it ? </li>
-          <%end%>
-          <li><%= link_to 'Home', store_index_path %></li>
-          <li><a href="/questions">Questions</a></li>
-          <li><a href="/news">News</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><%= link_to 'Carts', carts_path %></li>
+            <li class="text-white whitespace-nowrap">
+              <%= t('.visit_text', count: @session_counter.ordinalize) %></li>          <%end%>
+          <li><a href="<%= store_index_path(locale: I18n.locale) %>"><%= t('.home') %></a></li>          <li><a href="/questions"><%= t('.questions') %></a></li>
+          <li><a href="/news"><%= t('.news') %></a></li>
+          <li><a href="/contact"><%= t('.contact') %></a></li>
+          <li><a href="/carts"><%= t('.carts') %></a></li>
         </ul>
+
+
+        <% if session[:user_id] %>
+          <hr class="my-2 ">
+          <ul class="text-gray-300 leading-8">
+            <li><%= link_to 'Orders', orders_path %></li>
+            <li><%=link_to 'Products', products_path %></li>
+            <li><%=link_to 'Users', users_path %></li>
+            <li><%= link_to 'logout', logout_path, data: { turbo_method: :delete } %></li>
+
+          </ul>
+        <% end %>
       </nav>
 
       <main class="container mx-auto mt-4 px-5 flex">

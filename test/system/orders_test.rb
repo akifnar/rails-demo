@@ -20,17 +20,17 @@ class OrdersTest < ApplicationSystemTestCase
     click_on "Checkout"
 
     fill_in "Address", with: @order.address
-    fill_in "Email", with: @order.email
+    fill_in "E-mail", with: @order.email
     fill_in "Name", with: @order.name
 
     select "Check",  from: "Pay type"
-    fill_in "Routing number", with: "1234"
-    fill_in "Account number", with: "1234123412341234"
+    fill_in "Routing Number", with: "1234"
+    fill_in "Account Number", with: "1234123412341234"
 
     click_on "Place Order"
 
     assert_text "Thank you for your order."
-    assert_current_path store_index_path
+    assert_current_path store_index_path(I18n.locale)
   end
 
   test "should update Order" do
@@ -38,7 +38,7 @@ class OrdersTest < ApplicationSystemTestCase
     click_on "Edit this order", match: :first
 
     fill_in "Address", with: @order.address
-    fill_in "Email", with: @order.email
+    fill_in "E-mail", with: @order.email
     fill_in "Name", with: @order.name
     select PayType.find(@order.pay_type_id).name, from: "Pay type"
 
@@ -67,11 +67,11 @@ class OrdersTest < ApplicationSystemTestCase
 
     fill_in "Name", with: "Akif Nar"
     fill_in "Address", with: "123 Golbasi"
-    fill_in "Email", with: "akif@exa.org"
+    fill_in "E-mail", with: "akif@exa.org"
 
     select "Check", from: "Pay type"
-    fill_in "Routing number", with: "1234"
-    fill_in "Account number", with: "1234123412341234"
+    fill_in "Routing Number", with: "1234"
+    fill_in "Account Number", with: "1234123412341234"
 
     click_button "Place Order"
     assert_text "Thank you for your order"
@@ -110,11 +110,11 @@ class OrdersTest < ApplicationSystemTestCase
     click_on "Checkout"
     fill_in "Name", with: "Akif Nar"
     fill_in "Address", with: "123 Golbasi"
-    fill_in "Email", with: "akif@exa.org"
+    fill_in "E-mail", with: "akif@exa.org"
 
     select "Check", from: "Pay type"
-    fill_in "Routing number", with: "1234"
-    fill_in "Account number", with: "1234123412341234"
+    fill_in "Routing Number", with: "1234"
+    fill_in "Account Number", with: "1234123412341234"
 
     click_button "Place Order"
     assert_text "Thank you for your order."
