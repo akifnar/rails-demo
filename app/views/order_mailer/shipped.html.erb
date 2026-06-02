@@ -13,5 +13,5 @@
 
 <p>
   <strong>Estimated Arrival Date:</strong> 
-  <%= @order.shipdate.strftime("%B %d, %Y") if @order.shipdate %>
+  <%= @order.ship_date.strftime("%B %d, %Y") if @order.ship_date %>
 </p>

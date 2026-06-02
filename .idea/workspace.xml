@@ -1,23 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="49168e43-da45-47e1-9e04-73b9025b526d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/lib/tasks/db_schema_migrations.rake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/tasks/schema_dumper.rake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/products_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/products_controller.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/support_requests_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/support_requests_controller.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.rubocop.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.rubocop.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Gemfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/mailboxes/support_mailbox.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/mailboxes/support_mailbox.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/models/order.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/order.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/product.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/product.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/models/support_request.rb" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/support_request.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/products/_form.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/products/_form.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/products/_product.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/products/_product.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/products/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/products/index.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/store/_product.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/store/_product.html.erb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views/support_requests/index.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/support_requests/index.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views/order_mailer/shipped.html.erb" beforeDir="false" afterPath="$PROJECT_DIR$/app/views/order_mailer/shipped.html.erb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/application.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/application.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/credentials.yml.enc" beforeDir="false" afterPath="$PROJECT_DIR$/config/credentials.yml.enc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/database.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config/database.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/environments/production.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/environments/production.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/routes.rb" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/migrate/20260515115739_add_ship_date_to_order.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/migrate/20260515115739_add_ship_date_to_order.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/schema.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/schema.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/seeds.rb" beforeDir="false" afterPath="$PROJECT_DIR$/db/seeds.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/controllers/products_controller_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/controllers/products_controller_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/fixtures/support_requests.yml" beforeDir="false" afterPath="$PROJECT_DIR$/test/fixtures/support_requests.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/mailboxes/support_mailbox_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/mailboxes/support_mailbox_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/mailers/support_request_mailer_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/mailers/support_request_mailer_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/models/product_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/models/product_test.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/system/orders_test.rb" beforeDir="false" afterPath="$PROJECT_DIR$/test/system/orders_test.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="402" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,6 +65,69 @@
     &quot;accountId&quot;: &quot;fdadd245-4db1-4669-b8b1-c489e317974f&quot;
   }
 }</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.8573441709974619" />
+      <entry key="MS500" value="3.805198535121873" />
+      <entry key="S2" value="7.221192958680376" />
+      <entry key="S5" value="13.473049178849388" />
+      <entry key="S10" value="19.830661388900875" />
+      <entry key="S30" value="29.192646952716938" />
+      <entry key="S60" value="34.012212284133646" />
+      <entry key="M2" value="39.258599256240394" />
+      <entry key="M5" value="47.24220992859477" />
+      <entry key="M10" value="67.96603540150052" />
+      <entry key="M15" value="104.91397815132645" />
+      <entry key="M30" value="242.39066894547705" />
+      <entry key="H1" value="478.2187833607847" />
+      <entry key="H2" value="757.9580682446724" />
+      <entry key="H4" value="997.2953077939566" />
+      <entry key="D1" value="1288.0240163921815" />
+      <entry key="W1" value="1349.3850108404401" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="1.2279761027881401E-204" />
+      <entry key="S10" value="1.8758132565005675E-102" />
+      <entry key="S30" value="2.879250970953269E-34" />
+      <entry key="S60" value="3.691260552868306E-17" />
+      <entry key="M2" value="1.614548394132723E-8" />
+      <entry key="M5" value="0.003382948107084499" />
+      <entry key="M10" value="0.22514230802203955" />
+      <entry key="M15" value="0.929670561952998" />
+      <entry key="M30" value="3.9282535257995757" />
+      <entry key="H1" value="8.403551195671058" />
+      <entry key="H2" value="12.815697660272523" />
+      <entry key="H4" value="16.202966888097563" />
+      <entry key="D1" value="20.069753761944213" />
+      <entry key="W1" value="20.86333893216092" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.8102502220886325" />
+      <entry key="MS500" value="3.7813041915058423" />
+      <entry key="S2" value="7.209529621207834" />
+      <entry key="S5" value="13.464170144220313" />
+      <entry key="S10" value="19.823764956381602" />
+      <entry key="S30" value="29.18861208207651" />
+      <entry key="S60" value="34.00952788624054" />
+      <entry key="M2" value="39.25691573139687" />
+      <entry key="M5" value="47.24471268578529" />
+      <entry key="M10" value="68.18919518675843" />
+      <entry key="M15" value="105.83921306569222" />
+      <entry key="M30" value="246.30994649146842" />
+      <entry key="H1" value="486.6116014407342" />
+      <entry key="H2" value="770.7640408367905" />
+      <entry key="H4" value="1013.4912647962473" />
+      <entry key="D1" value="1308.0921196413526" />
+      <entry key="W1" value="1370.2480986451437" />
+    </decayedShown>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
 }</component>
@@ -59,18 +145,26 @@
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;Notification.DisplayName-DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;New/updated database configurations found&quot;,
     &quot;Notification.DoNotAsk-DatabaseConfigFileWatcher.found&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ruby.rubocop.migration.global.runOnSaveToExternalFormatter&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.lang.ruby.rbs.tools.collection.workspace.sync.RbsCollectionUpdateProjectActivity#LAST_UPDATE_TIMESTAMP&quot;: &quot;1779950281946&quot;,
+    &quot;com.intellij.lang.ruby.rbs.tools.collection.workspace.sync.RbsCollectionUpdateProjectActivity#LAST_UPDATE_TIMESTAMP&quot;: &quot;1780223100417&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/akifnar/github/rails-demo/app/controllers&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;ruby.structure.view.model.defaults.configured&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.runtime&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.completion.inline&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -86,6 +180,7 @@
     <option name="blackListedRootsPaths">
       <list>
         <option value="$PROJECT_DIR$" />
+        <option value="$PROJECT_DIR$/.ruby-lsp" />
       </list>
     </option>
   </component>
@@ -371,7 +466,14 @@
       <workItem from="1779853849207" duration="2915000" />
       <workItem from="1779950222898" duration="6700000" />
       <workItem from="1779967001714" duration="121000" />
-      <workItem from="1780004607931" duration="3916000" />
+      <workItem from="1780004607931" duration="4205000" />
+      <workItem from="1780061449265" duration="17362000" />
+      <workItem from="1780223041789" duration="4130000" />
+      <workItem from="1780235307624" duration="2146000" />
+      <workItem from="1780240874322" duration="600000" />
+      <workItem from="1780300034892" duration="812000" />
+      <workItem from="1780301045785" duration="4089000" />
+      <workItem from="1780305179338" duration="7826000" />
     </task>
     <task id="LOCAL-00001" summary="Add error handler for turbo_steam">
       <option name="closed" value="true" />
@@ -429,7 +531,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779956844896</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add rich text to products and display all orders in support requests">
+      <option name="closed" value="true" />
+      <created>1780008724770</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1780008724770</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +564,8 @@
     <MESSAGE value="Add verification inorder to update password and add initial user creation when application opened first time." />
     <MESSAGE value="Add product localization and add exchange rate between U.S. and euros" />
     <MESSAGE value="Add support mailbox and rich-text response features" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add support mailbox and rich-text response features" />
+    <MESSAGE value="Add rich text to products and display all orders in support requests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add rich text to products and display all orders in support requests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

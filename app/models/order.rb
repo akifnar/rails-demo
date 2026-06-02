@@ -64,7 +64,7 @@ class Order < ApplicationRecord
         OrderMailer.received(self).deliver_later
 
         transaction do
-          update!(shipdate: 1.day.from_now)
+          update!(ship_date: 1.day.from_now)
           OrderMailer.shipped(self).deliver_later
         end
     else

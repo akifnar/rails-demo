@@ -23,7 +23,7 @@ class OrdersTest < ApplicationSystemTestCase
     fill_in "E-mail", with: @order.email
     fill_in "Name", with: @order.name
 
-    select "Check",  from: "Pay type"
+    select "Check",  from: "Pay with"
     fill_in "Routing Number", with: "1234"
     fill_in "Account Number", with: "1234123412341234"
 
@@ -40,7 +40,7 @@ class OrdersTest < ApplicationSystemTestCase
     fill_in "Address", with: @order.address
     fill_in "E-mail", with: @order.email
     fill_in "Name", with: @order.name
-    select PayType.find(@order.pay_type_id).name, from: "Pay type"
+    select PayType.find(@order.pay_type_id).name, from: "Pay with"
 
     click_on "Place Order"
     assert_text "Order was successfully updated."
@@ -69,7 +69,7 @@ class OrdersTest < ApplicationSystemTestCase
     fill_in "Address", with: "123 Golbasi"
     fill_in "E-mail", with: "akif@exa.org"
 
-    select "Check", from: "Pay type"
+    select "Check", from: "Pay with"
     fill_in "Routing Number", with: "1234"
     fill_in "Account Number", with: "1234123412341234"
 
@@ -100,7 +100,7 @@ class OrdersTest < ApplicationSystemTestCase
   end
 
 
-   test "should update shipdate and check shipment mail" do
+   test "should update ship_date and check shipment mail" do
     LineItem.delete_all
     Order.delete_all
 
@@ -112,7 +112,7 @@ class OrdersTest < ApplicationSystemTestCase
     fill_in "Address", with: "123 Golbasi"
     fill_in "E-mail", with: "akif@exa.org"
 
-    select "Check", from: "Pay type"
+    select "Check", from: "Pay with"
     fill_in "Routing Number", with: "1234"
     fill_in "Account Number", with: "1234123412341234"
 
@@ -126,10 +126,10 @@ class OrdersTest < ApplicationSystemTestCase
     mail = ActionMailer::Base.deliveries.last
 
     if performed_jobs.size == 3
-      assert order.shipdate.present?
+      assert order&.ship_date.present?
       assert_equal "Pragmatic Store Order Shipped", mail.subject
     else
-      assert order.shipdate.nil?
+      assert order&.ship_date.nil?
     end
   end
 

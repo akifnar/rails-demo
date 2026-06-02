@@ -32,10 +32,13 @@ Rails.application.routes.draw do
   resources :support_requests, only: %i[ index update]
 
 
+  # config/routes.rb
   scope "(:locale)" do
     resources :orders
     resources :line_items
     resources :carts
     root "store#index", as: "store_index", via: :all
   end
+
+
 end

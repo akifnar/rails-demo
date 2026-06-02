@@ -14,13 +14,14 @@ class ProductTest < ActiveSupport::TestCase
     product = Product.new
     assert product.invalid?
     assert product.errors[:title].any?
-    assert product.errors[:description].any?
+    assert product.errors[:rich_description].any?
     assert product.errors[:price].any?
     assert product.errors[:image_url].any?
   end
+
   test "product price must be positive" do
     product = Product.new(title:       "My Book Title",
-                          description: "yyy",
+                          rich_description: "yyy",
                           image_url:   "zzz.jpg")
 
     product.price = -1
@@ -40,7 +41,7 @@ class ProductTest < ActiveSupport::TestCase
 
 def new_product(image_url)
   Product.new(title:       "My Book Title",
-              description: "yyy",
+              rich_description: "yyy",
               price:       1,
               image_url:   image_url)
 end

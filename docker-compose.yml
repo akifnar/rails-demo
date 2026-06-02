@@ -1,27 +1,37 @@
 services:
-  # Ruby/Rails uygulamamızın koşturulduğu ana servis
   web:
     build: .
-    # Konteynerin sürekli açık kalmasını sağlar, sen içinden rails s diyerek sunucuyu açabilirsin
-    command: tail -f /dev/null
     volumes:
-      - .:/rails
+      - .:/rails # Kodun tamamını bağla
+      - ./log:/rails/log
+      - ./storage:/rails/storage
     ports:
       - "3000:3000"
     environment:
-      - RAILS_ENV=development
-      - REDIS_URL=redis://redis:6379/1
+      RAILS_ENV: development
+      REDIS_URL: redis://redis-db:6379/1
+      # Veritabanı bilgilerini parçalı vermek Rails için daha sağlıklıdır
+      DATABASE_HOST: postgres-db
+      DATABASE_USER: root
+      DATABASE_PASSWORD: password
     depends_on:
-      - redis
+      redis-db:
+        condition: service_started
+      postgres-db:
+        condition: service_healthy
 
-  # Arka plan işleri ve önbellekleme için kullanılan Redis servisi
-  redis:
-    image: "redis:alpine"
-    ports:
-      - "6379:6379"
+  postgres-db:
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: password
     volumes:
-      - redis_data:/data
+      - ./tmp/postgres-db:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U root"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
 
-# Verilerin konteyner kapansa bile silinmemesi için disk alanları
-volumes:
-  redis_data:
+  redis-db:
+    image: redis

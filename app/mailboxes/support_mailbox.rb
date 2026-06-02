@@ -1,8 +1,6 @@
 class SupportMailbox < ApplicationMailbox
   def process
-    recent_order = Order.where(email: mail.from_address.to_s).order("created_at DESC")
-      order("created_at DESC").
-      first
+    recent_order = Order.where(email: mail.from_address.to_s).order("created_at DESC").first
 
     SupportRequest.create!(
       email: mail.from_address.to_s,

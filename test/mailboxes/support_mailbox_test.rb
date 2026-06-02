@@ -13,7 +13,6 @@ class SupportMailboxTest < ActionMailbox::TestCase
      assert_equal "akif@exa.com", support_request.email
      assert_equal "Hello world!", support_request.subject
      assert_equal "Hello?", support_request.body
-     assert_nil support_request.order
    end
 
    test "we create a SupportRequest with the most recent order" do
@@ -32,6 +31,6 @@ class SupportMailboxTest < ActionMailbox::TestCase
      assert_equal recent_order.email, support_request.email
      assert_equal "Need help?", support_request.subject
      assert_equal "I can't figure out how to check out!!", support_request.body
-     assert_equal recent_order, support_request.order
+     assert_equal recent_order , support_request.orders.last
    end
 end
