@@ -11,7 +11,7 @@ gem "ostruct"
 gem "importmap-rails"
 gem "turbo-rails"
 gem "stimulus-rails"
-gem "tailwindcss-rails", "~> 4.4"
+gem "tailwindcss-rails", "~> 4.5"
 
 # Veritabanları ve Depolama
 gem "sqlite3", ">= 1.4"
