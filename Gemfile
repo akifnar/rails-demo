@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 # Rails ve Core Bileşenler
-gem "rails", "~> 7.2.3", ">= 7.2.3.1"
+gem "rails", "~> 8.1.3"
 gem "sprockets-rails"
 gem "puma", ">= 5.0"
 gem "jbuilder"
